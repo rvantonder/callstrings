@@ -1,0 +1,7 @@
+Basic steps:
+1. Compile the target binary
+2. Run gen-syms.sh on a binary to generate a symbol table
+3. Feed the binary and symbol table to the analysis program
+4. Execute the tests
+
+To see this in action, execute ./run.sh
