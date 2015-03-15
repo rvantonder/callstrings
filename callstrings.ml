@@ -63,9 +63,9 @@ let write_callsite_table outfile callsite_table =
   Format.printf "Writing callsite table: %a\n" String.pp outfile;
   Format.set_formatter_out_channel file;
   Format.printf "%a\n" Sexp.pp @@
-  (Addr.Table.sexp_of_t sexp_of_string callsite_table) in
-Out_channel.close file;
-Format.set_formatter_out_channel stdout
+  (Addr.Table.sexp_of_t sexp_of_string callsite_table);
+  Out_channel.close file;
+  Format.set_formatter_out_channel stdout
 
 (* This loads callstrings from our serialized file *)
 let load_table tblfile =
